@@ -1,5 +1,6 @@
-package com.liuencier;
+package com.liuencier.client;
 
+import com.liuencier.service.AdditionService;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;

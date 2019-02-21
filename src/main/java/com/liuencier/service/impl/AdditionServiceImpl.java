@@ -1,5 +1,6 @@
-package com.liuencier;
+package com.liuencier.service.impl;
 
+import com.liuencier.service.AdditionService;
 import org.apache.thrift.TException;
 
 public class AdditionServiceImpl implements AdditionService.Iface{

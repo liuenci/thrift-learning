@@ -1,5 +1,7 @@
-package com.liuencier;
+package com.liuencier.server;
 
+import com.liuencier.service.AdditionService;
+import com.liuencier.service.impl.AdditionServiceImpl;
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
