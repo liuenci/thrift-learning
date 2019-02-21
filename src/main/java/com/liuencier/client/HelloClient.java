@@ -12,6 +12,7 @@ import org.apache.thrift.transport.TTransportException;
 public class HelloClient {
 
     private static final String HELLO = "HELLO";
+    private static final Boolean FALSE = false;
 
     public static void main(String[] args) {
         try {
@@ -21,8 +22,11 @@ public class HelloClient {
             TProtocol protocol = new TBinaryProtocol(tTransport);
             Hello.Client client = new Hello.Client(protocol);
 
-            log.info("hello:{}",client.helloString(HELLO));
-
+            log.info("helloString:{}",client.helloString(HELLO));
+            log.info("helloBoolean:{}",client.helloBoolean(FALSE));
+            log.info("helloInt:{}",client.helloInt(2));
+            client.helloVoid();
+//            log.info("helloNull:{}",client.helloNull());
             tTransport.close();
         } catch (TTransportException e) {
             e.printStackTrace();
